@@ -16,3 +16,6 @@ jobs:
       - run: echo $REF
         env:
           REF: ${{ github.ref }}
+      - run: echo $PR
+        env:
+          PR: ${{ github.event.pull_requests.number }}
