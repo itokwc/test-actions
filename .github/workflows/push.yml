@@ -13,9 +13,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
-      - run: npm ci
-      - run: npm install --no-save c8
-      - run: npm run postinstall
       - run: echo $REF
         env:
           REF: ${{ github.ref }}
