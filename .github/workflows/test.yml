@@ -16,6 +16,12 @@ jobs:
       - run: echo $REF
         env:
           REF: ${{ github.ref }}
-      - run: echo $PR
+      - run: echo $PRN
         env:
-          PR: ${{ github.event.number }}
+          PRN: ${{ github.event.number }}
+      - run: echo $PRA
+        env:
+          PRA: ${{ github.event.action }}
+      - run: echo $PRS
+        env:
+          PRS: ${{ github.event.sender }}
